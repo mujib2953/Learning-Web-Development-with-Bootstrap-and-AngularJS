@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+	<title>Lesson 1 ( Filters )</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../../repo/bootstrap.css" />
+	
+	<script type="text/javascript" src = "../../../../repo/jquery.min.js" ></script>
+	<script type="text/javascript" src = "../../../../repo/angular.js" ></script>
+
+	<script type="text/javascript" src = "app.js" ></script>
+</head>
+<body>
+	<div ng-controller = 'MainCtrl' >
+		<h1>Template HTML</h1>
+		
+		<p class="lead" > Currency filter default :: {{ value | currency }} </p>	
+		<p class="lead" > Currency filter pounds :: {{ value | currency: '£' }} </p>	
+		
+		<p class="lead" > number filter ( {{ number }} ) :: {{ number | number: 2 }} </p>	
+
+		<p class="lead" > lowercase filter ( {{ str }} ) :: {{ str | lowercase }} </p>	
+		<p class="lead" > uppercase filter ( {{ str }} ) :: {{ str | uppercase }} </p>	
+
+		<p class="lead"> Limit to filter ( {{ bigStr }} ) :: {{ bigStr | limitTo: 2 }} </p>
+
+		<p class="lead">This is ng-repeat in array having 3 value but used limitTo: 2 for the 2 value </p>
+		<ul>
+			<li ng-repeat = 'c in contacts | limitTo:2' > {{ c.name }} </li>
+		</ul>
+
+		<p class="lead"> Date filters {{ dateStr | date:'yyyy' }} </p>
+		<p class="lead"> Date filters {{ dateStr | date:'dd/MM/yyyy' }} </p>
+		<p class="lead"> Date filters {{ dateStr | date }} </p>
+
+		<h4>Searching filter and orderBy</h4>
+		<input type="text" name="searchBox" ng-model = "serachText" >
+		<ul>
+			<li ng-repeat = ' c in contacts  | filter:serachText | orderBy: "name": true' > {{ c.name }} </li>
+		</ul>
+
+
+	</div>
+	
+</body>
+</html>

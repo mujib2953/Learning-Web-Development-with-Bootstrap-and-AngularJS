@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+	<title>Lesson 2</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../../repo/bootstrap.css">
+	
+	<script type="text/javascript" src = "../../../../repo/jquery.min.js" ></script>
+	<script type="text/javascript" src = "../../../../repo/bootstrap.js" ></script>
+	
+	<script type="text/javascript" src = "../../../../repo/angular.js" ></script>
+	<script type="text/javascript" src = "app.js" ></script>
+</head>
+<body>
+	<div ng-controller="MainCtrl" class = 'container' >
+		<div class="page-header" >
+			<h2>Chapter 1 <small> Hello, world!</small> </h2>
+		</div>
+
+		<div class="jumbotron" >
+			<h1>Template HTML</h1>
+			<input type="text" name="name" ng-model = "name" placeholder="Type Your Name" class="form-control input-lg " >
+			<br />
+			<p>Hello, {{ name || 'world!' }}</p>	
+		</div>
+	</div>
+
+</body>
+</html>

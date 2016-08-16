@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+	<title>Lesson 2 ( Custom Filters )</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../../repo/bootstrap.css" />
+	
+	<script type="text/javascript" src = "../../../../repo/jquery.min.js" ></script>
+	<script type="text/javascript" src = "../../../../repo/angular.js" ></script>
+
+	<script type="text/javascript" src = "app.js" ></script>
+</head>
+<body>
+	<div ng-controller = 'MainCtrl' >
+		<h1>Template HTML</h1>
+		
+		<p class="lead"> {{ txt | truncate: 6 }} </p>		
+
+	</div>
+	
+</body>
+</html>
