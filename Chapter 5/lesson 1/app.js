@@ -4,22 +4,35 @@
 	
 	//-- controllers
 	app.controller( 'IndexCtrl', [ '$scope', '$rootScope', function( $scope, $rootScope ) {
-		$scope.hello = "Hello index..!";
+		
+		$scope.pageHeader = "All Contacts";
 		$rootScope.navPath = "partials/nav.html";
 		
 		$scope.templateName = $rootScope.navPath;
 	} ] );
 
 	app.controller( 'AddCtrl', [ '$scope', '$rootScope', function( $scope, $rootScope ) {
-		$scope.hello = "Hello Add..!";
+		
+		$scope.pageHeader = "Add Contacts";
 		$scope.templateName = $rootScope.navPath;
+
 	} ] );
 
 	app.controller( 'ContactCtrl', [ '$scope', '$rootScope', '$routeParams', function( $scope, $rootScope, $routeParams ) {
-		$scope.hello = "Hello contact..!";
+		
+		$scope.pageHeader = "View Contacts";
 		$scope.templateName = $rootScope.navPath;
+		
 		console.log( $routeParams );
 		console.log( "The user id is " + $routeParams.id );
+	} ] );
+
+	app.controller( 'GravtarCtrl', [ '$scope', '$rootScope', function( $scope, $rootScope ) {
+		
+		$scope.pageHeader = "Gravtar";
+		console.log( $rootScope.navPath );
+		$scope.templateName = $rootScope.navPath;
+
 	} ] );
 
 	// -- routing
@@ -35,6 +48,10 @@
 		.when( '/contact/:id', {
 			controller: 'ContactCtrl',
 			templateUrl: 'partials/contact.html'
+		} )
+		.when( '/gravtar', {
+			controller: 'GravtarCtrl',
+			templateUrl: 'partials/gravtar.html'
 		} )
 		.otherwise({
 			redirectTo: "/"
