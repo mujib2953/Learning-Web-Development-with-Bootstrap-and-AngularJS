@@ -1,0 +1,68 @@
+<div>
+	<div class="page-header row" >
+		<h1>
+			<img src="http://placehold.it/50x50" class="img-circle">
+			{{ pageHeader }}
+		</h1>
+	</div>
+
+	<form class="form-horizontal" >
+		<div class="row" >
+			<div class="col-xs-6" >
+
+				<!-- Name -->
+				<div class="form-group row" >
+					<label for="name" class="control-label col-sm-4" >Name</label>
+					<div class="col-sm-8" >
+						<p class="form-control-static" > {{ user.name }} </p>
+					</div>
+				</div>
+
+				<!-- Phone Number -->
+				<div class="form-group row" >
+					<label for="phone" class="control-label col-sm-4" >Phone Number</label>
+					<div class="col-sm-8" >
+						<p class="form-control-static" > {{ user.phone }} </p>
+					</div>
+				</div>
+
+				<!-- Address -->
+				<div class="form-group row" >
+					<label for="address" class="control-label col-sm-4" >Address</label>
+					<div class="col-sm-8" >
+						<p class="form-control-static" >{{ user.address }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6" >
+				
+				<!-- email -->
+				<div class="form-group row" >
+					<label for="email" class="control-label col-sm-4" >Email Address</label>
+					<div class="col-sm-8" >
+						<p class="form-control-static" > {{ user.email }} </p>
+					</div>
+				</div>
+
+				<!-- website -->
+				<div class="form-group row" >
+					<label for="website" class="control-label col-sm-4" >Website</label>
+					<div class="col-sm-8" >
+						<p class="form-control-static" > {{ user.website }} </p>
+					</div>
+				</div>
+
+				<!-- notes -->
+				<div class="form-group row" >
+					<label for="notes" class="control-label col-sm-4" >Notes</label>
+					<div class="col-sm-8" >
+						<p class="form-control-static" > {{ user.notes }} </p>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</form>
+</div>
