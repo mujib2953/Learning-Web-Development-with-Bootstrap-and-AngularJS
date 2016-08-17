@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+	<title>Lesson 1 ( custom directive )</title>
+
+	<link rel="stylesheet" type="text/css" href="../../../../repo/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	
+	<script type="text/javascript" src = "../../../../repo/jquery.min.js" ></script>
+	<script type="text/javascript" src = "../../../../repo/bootstrap.js" ></script>
+	
+	<script type="text/javascript" src = "../../../../repo/angular.js" ></script>
+	<script type="text/javascript" src = "../../../../repo/angular-route.js" ></script>
+	<script type="text/javascript" src = "../../../../repo/sanitize.js" ></script>
+	<script type="text/javascript" src = "app.js" ></script>
+
+	<script type="text/javascript" src = "js/controller.js" ></script>
+	<script type="text/javascript" src = "js/routing.js" ></script>
+	<script type="text/javascript" src = "js/services.js" ></script>
+	<script type="text/javascript" src = "js/directives.js" ></script>
+	<script type="text/javascript" src = "js/filters.js" ></script>
+
+
+	
+	<!-- <base href="http://localhost/OneDrive/AJS/PacketPublishing/Chapter%205/lesson%201/"> -->  <!-- Home -->
+	<!-- <base href="http://172.19.3.160/OneDrive/AJS/PacketPublishing/Chapter%205/lesson%201/"> -->	<!-- Office -->
+</head>
+<body>
+	<div class="container">
+		<div ng-controller = 'NavigationCtrl' >
+			<div class="activityArea" ng-include = 'templateName' ></div>
+		</div>
+		<ng-view></ng-view>
+	</div>
+</body>
+</html>

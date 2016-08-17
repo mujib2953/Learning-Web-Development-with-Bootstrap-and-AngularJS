@@ -1,0 +1,71 @@
+<!-- <div ng-controller = "AddCtrl" > -->
+<div>
+	<div class="page-header" >
+		<h2>{{ pageHeader }}</h2>
+	</div>
+
+	<form class="form-horizontal">
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Name -->
+				<div class="row form-group" >
+					<label for="name" class="col-sm-4 control-label" >Name</label>
+					<div class="col-sm-8" >
+						<input type="text" name="name" id="name" class="form-control" >	
+					</div>
+				</div>
+
+				<!-- Phone Number -->
+				<div class="row form-group" >
+					<label for="phoneNumber" class="col-sm-4 control-label" >Phone Number</label>
+					<div class="col-sm-8" >
+						<input type="number" name="phoneNumber" id="phoneNumber" class="form-control" >
+					</div>
+				</div>
+
+				<!-- Address -->
+				<div class="row form-group" >
+					<label for="Address" class="col-sm-4 control-label" >Address</label>
+					<div class="col-sm-8">
+						<textarea id="Address" class="form-control" ></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				
+				<!-- email id -->
+				<div class="row form-group" >
+					<label for="email" class="col-sm-4 control-label" >Email Address</label>
+					<div class="col-sm-8" >
+						<input type="email" name="email" id="email" class="form-control" >	
+					</div>
+				</div>
+
+				<!-- website -->
+				<div class="row form-group" >
+					<label for="website" class="col-sm-4 control-label" >Website</label>
+					<div class="col-sm-8" >
+						<input type="website" name="website" id="website" class="form-control" >	
+					</div>
+				</div>
+
+				<!-- Notes -->
+				<div class="row form-group" >
+					<label for="notes" class="col-sm-4 control-label" >Notes</label>
+					<div class="col-sm-8">
+						<textarea id="notes" class="form-control" ></textarea>
+						<span class="help-block" >Any additional information about the contact.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- button -->
+		<div class="form-group well">
+			<div class="col-sm-offset-5 col-sm-10">
+				<!-- <button class="btn btn-primary">Add Contact</button> -->
+				<input type="submit" name="submit" class="btn btn-primary" value="Add Contacts" >
+			</div>
+		</div>
+	</form>
+</div>
