@@ -18,7 +18,10 @@
 					<td> {{ c.name }} </td>
 					<td> {{ c.email }} </td>
 					<td> {{ c.phone }} </td>
-					<td><a href="#/gravtar/{{ $index }}" class="btn btn-primary btn-xs" >View</a></td>
+					<td>
+						<a href="#/gravtar/{{ $index }}" class="btn btn-primary btn-xs" >View</a>
+						<a ng-click = 'removeUser( $index )' class="btn btn-danger btn-xs" >delete</a>
+					</td>
 				</tr>
 				
 			</tbody>

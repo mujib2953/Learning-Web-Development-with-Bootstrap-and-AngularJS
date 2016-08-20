@@ -12,19 +12,30 @@
 		
 		$scope.searchText = $rootScope.searchText;
 		
+		//-- schecking if serachText is changed anywhere the update its value
 		$scope.$watch(function() {
 		  return $rootScope.searchText;
 		}, function() {
 		  $scope.searchText = $rootScope.searchText;
 		}, true);
 
+		//-- reomve the contacts form directory
+		$scope.removeUser = function( id ) {
+			contactFactory.remove( id );
+		};
+
 
 	} ] );
 
-	app.controller( 'AddCtrl', [ '$scope', '$rootScope', function( $scope, $rootScope ) {
+	app.controller( 'AddCtrl', [ '$scope', '$rootScope', 'contactFactory', function( $scope, $rootScope, contactFactory ) {
 		
 		$scope.pageHeader = "Add Contacts";
 		$scope.templateName = $rootScope.navPath;
+		$scope.onSubmit = function( obj ) {
+			contactFactory.add( obj );
+			$scope.added = true;
+			$scope.contacts = null;
+		};
 
 	} ] );
 
@@ -51,18 +62,11 @@
 		$scope.templateName = "partials/nav.html";
 		$scope.startSearch = function( text ) {
 			$location.path( '/' );
-			 
-			  				$rootScope.searchText = text;
-	
-
-
+			$rootScope.searchText = text;
 		};
 		$scope.pageClass = function(path){
 			return (path == $location.path()) ? 'active' : '';
 		};
-		
-		
-
 		
 		console.log( "included :: ",$scope.templateName );
 	} ] );

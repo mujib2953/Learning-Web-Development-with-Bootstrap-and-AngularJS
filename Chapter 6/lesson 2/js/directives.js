@@ -9,7 +9,6 @@
 			link: function( scope, elem, attrs ) {
 
 				var md5 = function(s) {
-					console.log( "inside MD5" );
 						    function
 						    L(k, d) {
 						        return (k << d) | (k >>> (32 - d))
@@ -273,6 +272,43 @@
 			}
 		}
 
+	} );
+
+	//-- editable
+	app.directive( 'editable', function() {
+		return {
+
+			restrict: 'AE',
+			templateUrl: 'partials/edits.html',
+
+			scope: {
+				value: '=editable',
+				field: '@fieldType'
+				
+			},
+			controller: function( $scope ) {
+				
+				console.log( $scope.value );
+				console.log( $scope.field );
+				
+				$scope.editor = {
+					showing: false,
+					value: $scope.value
+				};
+
+				$scope.toggleEditor = function() {
+					$scope.editor.showing = !$scope.editor.showing;
+				};
+
+				$scope.save = function() {
+					$scope.value = $scope.editor.value;
+					$scope.toggleEditor();	
+				}
+
+				$scope.field = ($scope.field) ? $scope.field : 'text';
+
+			}
+		};
 	} );
 
 }() );

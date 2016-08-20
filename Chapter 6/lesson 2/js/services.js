@@ -93,6 +93,14 @@
 			},
 			find: function( index ) {
 				return obj[ index ];
+			},
+			add: function( cont ) {
+				obj.push( cont );
+			},
+			remove: function( id ) {
+				obj.splice( id, 1 );
+				console.log( "removed" );
+				console.log( obj );
 			}
 		}
 

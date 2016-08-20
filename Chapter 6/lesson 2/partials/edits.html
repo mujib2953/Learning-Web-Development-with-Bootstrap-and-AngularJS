@@ -1,0 +1,18 @@
+<div ng-hide="editor.showing">
+	<span ng-bind-html="value | paragraph"></span> <button class="btn btn-default btn-xs" ng-click="toggleEditor()">Edit</button>
+</div>
+
+<div ng-show="editor.showing">
+	<div ng-if="field == 'textarea'">
+		<textarea ng-model="editor.value" class="form-control" required="true" ></textarea>
+	</div>
+
+	<div ng-if="field != 'textarea'">
+		<input type="{{field}}" ng-model="editor.value" class="form-control" required="true" >
+	</div>
+
+	<hr>
+	
+	<button class="btn btn-success btn-xs" ng-click="save()">Save</button>
+	<button class="btn btn-default btn-xs" ng-click="toggleEditor()">Cancel</button>
+</div>
